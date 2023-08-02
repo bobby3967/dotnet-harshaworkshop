@@ -2,7 +2,7 @@ resources:
   repositories:
     - repository: Pipelines
       type: git
-      name: Pipeline
+      name: Pipelines
       ref: 'main'
 variables:
 - name: buildprojects
