@@ -1,6 +1,8 @@
 variables:
 - name: project
   value: '**/*.sln'
+- name: BuildConfiguration
+  value: 'Release'
 name: $(date:yyyyMMdd)$(rev:.r)
 jobs:
 - job: Job_1
