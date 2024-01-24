@@ -25,13 +25,14 @@ stages:
       inputs:
         command: 'build'
         projects: $(BuildParameters.RestoreBuildProjects)
-        arguments: --configuration 
+        arguments: --configuration $(BuildConfiguration)
     - task: DotNetCoreCLI@2
       inputs:
         command: 'publish'
         publishWebProjects: false
         projects: '$(BuildParameters.RestoreBuildProjects)'
         arguments: '--configuration  $(BuildConfiguration) --output $(build.artifactStagingDirectory))'
+
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
