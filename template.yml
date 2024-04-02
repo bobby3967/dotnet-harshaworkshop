@@ -6,7 +6,7 @@ resources:
       ref: 'main'
 variables:
 - name: buildprojects
-  value: 'aspnetapp.sln'
+  value: 'aspnetapp/aspnetapp.sln'
 - name: BuildConfiguration
   value: 'Release'
 
